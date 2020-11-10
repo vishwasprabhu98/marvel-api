@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "marvelAssignment"
+    }
+  },
+  "defaultProject": "marvelAssignment",
+  "cli": {
+    "analytics": false
+  }
 }

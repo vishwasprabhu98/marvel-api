@@ -1,0 +1,69 @@
+@import 'src/mixins/mixin.scss';
+
+.header {
+  font-family: sans-serif;
+  height: 10vh;
+  width: 100%;
+  padding: 0px 75px;
+  background: $footer-background;
+  border-bottom: 1px solid $header-border;
+  @include display($direction: row);
+  justify-content: space-between;
+  letter-spacing: 1px;
+  .register {
+    @include header-buttons;
+  }
+
+  .logo {
+    img {
+      height: 10vh;
+    }
+  }
+
+  .search {
+    @include header-buttons;
+    padding: 0px;
+
+    a {
+      width: 150px;
+      @include header-buttons;
+      border: none;
+    }
+
+    span {
+      @include header-buttons;
+      border-right: none;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.header-wrapper {
+  height: 40px;
+  width: 100%;
+  background-color: $footer-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    a {
+      height: 100%;
+      color: $faded-gray;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: .1s all ease;
+      &:hover {
+        color: $link-hover;
+        border-bottom: 2px solid red;
+      }
+    }
+  }
+}

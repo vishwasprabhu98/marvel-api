@@ -1,0 +1,28 @@
+$faded-gray: #807d7d;
+$link-hover: #f5f5f5;
+$footer-background: #000000;
+$header-border: #807d7d8a;
+
+@mixin links {
+    color: $faded-gray;
+    text-decoration: none;
+    transition: 0.1s all ease;
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+@mixin display($direction) {
+    display: flex;
+    flex-direction: $direction;
+} 
+
+@mixin header-buttons {
+    color: white;
+    height: 100%;
+    border-left: 1px solid $header-border;
+    border-right: 1px solid $header-border;
+    @include display($direction: row);
+    align-items: center;
+    padding: 0px 20px;
+}

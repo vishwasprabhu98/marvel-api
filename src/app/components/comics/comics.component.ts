@@ -15,7 +15,7 @@ export class ComicsComponent implements OnInit {
     private fetchService: CharactersService) { }
 
   ngOnInit(): void {
-    this.fetchComics(1, 6);
+    this.fetchComics(578, 6);
   }
 
   fetchComics(offset: number, limit: number): void{

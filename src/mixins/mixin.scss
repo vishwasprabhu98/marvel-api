@@ -17,6 +17,12 @@ $header-border: #807d7d8a;
     flex-direction: $direction;
 } 
 
+@mixin display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin header-buttons {
     color: white;
     height: 100%;
@@ -25,4 +31,63 @@ $header-border: #807d7d8a;
     @include display($direction: row);
     align-items: center;
     padding: 0px 20px;
+}
+
+@mixin loading($height, $load) {
+    background: $footer-background;
+    width: 0.8rem;
+    margin: 3px;
+    border-radius: 0.5rem;
+    height: $height;
+    animation-name: $load;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@mixin api-support-links {
+  flex-basis: 300px;
+
+  a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s all ease;
+
+    &:hover {
+      color: red;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+@mixin nav-title-style {
+  .nav {
+    height: 50px;
+    @include display-center;
+
+    a {
+      font-family: monospace;
+      text-decoration: none;
+      color: black;
+      margin: 0px 15px;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+
+  }
+
+  .title {
+    @include display-center;
+    margin: 15px 0px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }

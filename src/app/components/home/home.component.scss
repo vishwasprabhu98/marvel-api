@@ -1,0 +1,52 @@
+@import 'src/mixins/mixin.scss';
+
+@mixin button-box {
+  background: black;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+
+.home {
+  height: 85vh;
+  width: 100%;
+  background-image: url('../../../assets/ironman.jpg');
+  background-size: cover;
+  padding: 20vh 0px 0px 10vw;
+  color: white;
+
+  p {
+    width: 40%;
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    background: red;
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    @include display-center;
+    cursor: default;
+    transition: 0.2s all ease;
+    font-weight: bold;
+    outline: none;
+    .box-1 {
+      @include button-box;
+      top: -10px;
+      left: -10px;
+    }
+
+    .box-2 {
+      @include button-box;
+      bottom: -10px;
+      right: -10px;
+    }
+
+    &:hover {
+        background: #ff00008e;
+    }
+  }
+}

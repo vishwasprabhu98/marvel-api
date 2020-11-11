@@ -1,7 +1,6 @@
 @import 'src/mixins/mixin.scss';
 
 .header {
-  font-family: sans-serif;
   height: 10vh;
   width: 100%;
   padding: 0px 75px;
@@ -42,16 +41,11 @@
   height: 40px;
   width: 100%;
   background-color: $footer-background;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
+  @include display-center;
   font-size: 14px;
   letter-spacing: 1px;
   .links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-center;
     height: 100%;
     a {
       height: 100%;
@@ -61,6 +55,10 @@
       font-weight: bold;
       transition: .1s all ease;
       &:hover {
+        color: $link-hover;
+        border-bottom: 2px solid red;
+      }
+      &:focus {
         color: $link-hover;
         border-bottom: 2px solid red;
       }

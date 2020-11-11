@@ -8,21 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() {
-
    }
 
   ngOnInit(): void {
   }
-
-  mousenter(event: any){
-    console.log(event.target.dataset.visible)
-    console.log(event)
-  }
-
-  mouseleave(event){
-    console.log('bye')
-  }
-
 }
 
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/services/characters.service';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-comics',
@@ -12,7 +12,7 @@ export class ComicsComponent implements OnInit {
   message: any ;
 
   constructor(private http: HttpClient,
-    private fetchService: CharactersService) { }
+    private fetchService: CommonService) { }
 
   ngOnInit(): void {
     this.fetchComics(578, 6);

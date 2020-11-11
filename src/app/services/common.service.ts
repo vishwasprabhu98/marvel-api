@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {Md5} from 'ts-md5/dist/md5';
-import { urlAndKey } from './baseUrl'
+import { urlAndKey } from './baseUrl';
+
 @Injectable({
   providedIn: 'root'
 })
-export class CharactersService {
+export class CommonService {
 
   constructor(private http: HttpClient) { }
   ts = Date.now();

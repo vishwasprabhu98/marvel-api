@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/services/characters.service';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-character',
@@ -13,7 +13,7 @@ export class CharacterComponent implements OnInit {
   message: any ;
 
   constructor(private http: HttpClient,
-    private fetchService: CharactersService) { }
+    private fetchService: CommonService) { }
 
   ngOnInit(): void {
     this.fetchCharacters(554, 6);

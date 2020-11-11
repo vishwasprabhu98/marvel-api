@@ -1,0 +1,24 @@
+<app-loading *ngIf="isLoading"></app-loading>
+
+<div class="container">
+    <div class="nav">
+        <a href="#">RELEASE CALENDER</a>
+        <a href="#">MARVEL UNLIMITED</a>
+        <a href="#">SHOP DIGITAL COMICS</a>
+        <a href="#">READING LIST</a>
+        <a href="#">ALL COMICS</a>
+    </div>
+    <div class="title">
+        <p>LATEST COMICS</p>
+    </div>
+    <div class="characters">
+        <div *ngFor="let result of message"> 
+            <div class="image-wrapper">
+                <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
+                <p class="name">{{result.title}}</p>
+                <p class="name">$ {{result.prices[0].price}}</p>
+                <div class="sq"></div>
+            </div>
+        </div>
+    </div>
+</div>

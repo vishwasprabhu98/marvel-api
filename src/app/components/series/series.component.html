@@ -12,10 +12,10 @@
         <p>LATEST SHOWS</p>
     </div>
     <div class="row">
-        <div class="movie" *ngFor="let result of message"> 
+        <div class="column" *ngFor="let result of message"> 
             <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
             <p class="name">{{result.title}}</p>
-            <p class="year">{{result.startYear}}</p>
+            <p class="sub-text">{{result.startYear}}</p>
         </div>
     </div>
 </div>

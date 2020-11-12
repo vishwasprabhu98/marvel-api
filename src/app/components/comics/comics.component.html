@@ -12,10 +12,10 @@
         <p>LATEST COMICS</p>
     </div>
     <div class="row">
-        <div class="comic" *ngFor="let result of message"> 
+        <div class="column" *ngFor="let result of message"> 
             <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
             <p class="name">{{result.title}}</p>
-            <p class="price">$ {{result.prices[0].price}}</p>
+            <p class="sub-text">$ {{result.prices[0].price}}</p>
         </div>
     </div>
 </div>

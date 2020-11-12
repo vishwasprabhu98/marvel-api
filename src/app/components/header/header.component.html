@@ -14,13 +14,13 @@
 
 <div class="header-wrapper">
     <div class="links">
-        <a href="/videos">VIDEO</a>
-        <a href="/character">CHARACTERS</a>
-        <a href="comics">COMICS</a>
-        <a href="/movies">MOVIES</a>
-        <a href="/shows">TV SHOWS</a>
-        <a href="#">GAMES</a>
-        <a href="/">HOME</a>
-        <a href="/home#footer">MORE</a>
+        <a [ngClass]="{'active': active === 'videos'}" (click)="active='videos'" routerLink="videos">VIDEO</a>
+        <a [ngClass]="{'active': active === 'character'}" (click)="active='character'" routerLink="character">CHARACTERS</a>
+        <a [ngClass]="{'active': active === 'comics'}" (click)="active='comics'" routerLink="comics">COMICS</a>
+        <a [ngClass]="{'active': active === 'movies'}" (click)="active='movies'" routerLink="movies">MOVIES</a>
+        <a [ngClass]="{'active': active === 'shows'}" (click)="active='shows'" routerLink="shows">TV SHOWS</a>
+        <a [ngClass]="{'active': active === 'games'}" (click)="active='games'" routerLink="">GAMES</a>
+        <a [ngClass]="{'active': active === 'home'}" (click)="active='home'" routerLink="">HOME</a>
+        <a [ngClass]="{'active': active === 'more'}" (click)="active='more'" routerLink="home">MORE</a>
     </div>
 </div>

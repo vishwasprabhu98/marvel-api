@@ -3,7 +3,7 @@
 .header {
   height: 10vh;
   width: 100%;
-  padding: 0px 75px;
+  padding: 0px 8vw;
   background: $footer-background;
   border-bottom: 1px solid $header-border;
   @include display($direction: row);
@@ -38,7 +38,7 @@
 }
 
 .header-wrapper {
-  height: 40px;
+  min-height: 40px;
   width: 100%;
   background-color: $footer-background;
   @include display-center;
@@ -46,6 +46,7 @@
   letter-spacing: 1px;
   .links {
     @include display-center;
+    flex-wrap: wrap;
     height: 100%;
     a {
       height: 100%;
@@ -58,10 +59,18 @@
         color: $link-hover;
         border-bottom: 2px solid red;
       }
-      &:focus {
-        color: $link-hover;
-        border-bottom: 2px solid red;
-      }
     }
+    .active {
+      color: $link-hover;
+      border-bottom: 2px solid red;
+    }
+  }
+}
+
+@media screen and (max-width: 900px){
+  .register {
+    position: absolute;
+    opacity: 0;
+    left: -300px;
   }
 }

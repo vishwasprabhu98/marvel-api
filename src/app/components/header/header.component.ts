@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   constructor() {
    }
 
+  active: string = '';
+
   ngOnInit(): void {
   }
 }

@@ -1,38 +1,39 @@
 @import 'src/mixins/mixin.scss';
 
 .watch {
-    height: 80vh;
-    padding: 0px 12vw;
-    position: relative;
-    iframe {
-        width: 60vw;
-        height: 60vh;
-    }
+  height: 80vh;
+  padding: 0px 12vw;
+  position: relative;
 
-    p {
-        @include display-center;
-        justify-content: flex-start;
-        margin-top: 20px;
-        font-size: 1.3rem;
-        font-weight: bold;
-    }
+  iframe {
+    width: 60vw;
+    height: 60vh;
+  }
 
-    .category {
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: $sub-text;
-    }
+  p {
+    @include display-center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 
-    .btn {
-        @include display-center;
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background: $sub-text;
-        color: #ffffff;
-        font-size: 1.5rem;
-        position: absolute;
-        top: 0;
-        right: 50px;
-    }
+  .category {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $sub-text;
+  }
+
+  .btn {
+    @include display-center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: $sub-text;
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 50px;
+  }
 }

@@ -12,13 +12,13 @@ export class WatchComponent implements OnInit {
   @Input() url: SafeResourceUrl;
   @Output() visiblityEvent = new EventEmitter<boolean>();
 
-  constructor( private _sanitizer: DomSanitizer ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
-  close(){
+  close() {
     this.visiblityEvent.emit(false);
   }
 

@@ -1,21 +1,23 @@
-<app-loading *ngIf="isLoading"></app-loading>
-
 <div class="container">
-    <div class="nav">
-        <a href="#">RELEASE CALENDER</a>
-        <a href="#">MARVEL UNLIMITED</a>
-        <a href="#">SHOP DIGITAL COMICS</a>
-        <a href="#">READING LIST</a>
-        <a href="#">ALL COMICS</a>
+  <div class="nav">
+    <a href="#">RELEASE CALENDER</a>
+    <a href="#">MARVEL UNLIMITED</a>
+    <a href="#">SHOP DIGITAL COMICS</a>
+    <a href="#">READING LIST</a>
+    <a href="#">ALL COMICS</a>
+  </div>
+  <div class="title">
+    <p>LATEST COMICS</p>
+  </div>
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div class="row">
+    <div class="column" *ngFor="let result of results">
+      <a (click)="getDetails(result.resourceURI)">
+        <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
+        <p class="name">{{result.title}}</p>
+        <p class="sub-text">$ {{result.prices[0].price}}</p>
+      </a>
     </div>
-    <div class="title">
-        <p>LATEST COMICS</p>
-    </div>
-    <div class="row">
-        <div class="column" *ngFor="let result of message"> 
-            <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
-            <p class="name">{{result.title}}</p>
-            <p class="sub-text">$ {{result.prices[0].price}}</p>
-        </div>
-    </div>
+  </div>
 </div>
+<app-details *ngIf="details.show" [obj]="details"></app-details>

@@ -1,22 +1,24 @@
-<app-loading *ngIf="isLoading"></app-loading>
-
 <div class="container">
-    <div class="nav">
-        <a href="#">ALL CHARACTERS</a>
-        <a href="#">TEAMS AND GROUPS</a>
-        <a href="#">EXPLORE ALL</a>
-    </div>
-    <div class="title">
-        <p>TRENDING CHARACTERS</p>
-    </div>
-    <div class="row">
-        <div class="character" *ngFor="let result of message"> 
-            <div class="image-wrapper">
-                <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
-                <p class="name">{{result.name}}</p>
-                <div class="sq"></div>
-            </div>
+  <div class="nav">
+    <a href="#">ALL CHARACTERS</a>
+    <a href="#">TEAMS AND GROUPS</a>
+    <a href="#">EXPLORE ALL</a>
+  </div>
+  <div class="title">
+    <p>TRENDING CHARACTERS</p>
+  </div>
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div class="row">
+    <div class="character" *ngFor="let result of results">
+      <a (click)="getDetails(result.resourceURI)">
+        <div class="image-wrapper">
+          <img src='{{result.thumbnail.path + "." + result.thumbnail.extension}}' alt="">
+          <p class="name">{{result.name}}</p>
+          <div class="sq"></div>
         </div>
+      </a>
     </div>
+  </div>
 </div>
 
+<app-details *ngIf="details.show" [obj]="details"></app-details>

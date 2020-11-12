@@ -9,6 +9,7 @@
   @include display($direction: row);
   justify-content: space-between;
   letter-spacing: 1px;
+
   .register {
     @include header-buttons;
   }
@@ -44,10 +45,12 @@
   @include display-center;
   font-size: 14px;
   letter-spacing: 1px;
+
   .links {
     @include display-center;
     flex-wrap: wrap;
     height: 100%;
+
     a {
       height: 100%;
       color: $faded-gray;
@@ -55,19 +58,21 @@
       padding: 10px 20px;
       font-weight: bold;
       transition: .1s all ease;
+
       &:hover {
         color: $link-hover;
         border-bottom: 2px solid red;
       }
     }
+
     .active {
-      color: $link-hover;
-      border-bottom: 2px solid red;
+        border-bottom: 2px solid red;
+        color: $link-hover;
     }
   }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .register {
     position: absolute;
     opacity: 0;

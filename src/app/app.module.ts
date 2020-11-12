@@ -13,6 +13,7 @@ import { VideosComponent } from './components/videos/videos.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { SeriesComponent } from './components/series/series.component';
 import { WatchComponent } from './components/watch/watch.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WatchComponent } from './components/watch/watch.component';
     VideosComponent,
     MoviesComponent,
     SeriesComponent,
-    WatchComponent
+    WatchComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

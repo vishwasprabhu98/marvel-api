@@ -1,22 +1,22 @@
 <app-loading *ngIf="isLoading"></app-loading>
 
 <div class="container">
-    <div class="nav">
-        <a href="#">TRAILERS & EXTRAS</a>
-        <a href="#">DIGITAL SERIES</a>
-        <a href="#">ALL VIDEOS</a>
+  <div class="nav">
+    <a href="#">TRAILERS & EXTRAS</a>
+    <a href="#">DIGITAL SERIES</a>
+    <a href="#">ALL VIDEOS</a>
+  </div>
+  <div class="title">
+    <p>TRENDING VIDEO</p>
+  </div>
+  <div class="row">
+    <div class="video" *ngFor="let result of message">
+      <img src={{result.image}} alt="">
+      <p class="category">{{result.category}}</p>
+      <p class="name">{{result.title}}</p>
+      <div class="play-button" (click)='select(result)'><span class="fa fa-play"></span></div>
     </div>
-    <div class="title">
-        <p>TRENDING VIDEO</p>
-    </div>
-    <div class="row">
-        <div class="video" *ngFor="let result of message"> 
-            <img src={{result.image}} alt="">
-            <p class="category">{{result.category}}</p>
-            <p class="name">{{result.title}}</p>
-            <div class="play-button" (click)='select(result)'><span class="fa fa-play"></span></div>
-        </div>
-    </div>
+  </div>
 </div>
 
-<app-watch  *ngIf="visibility" [obj]="selected" [url] = "url" (visiblityEvent)="watchVisibility($event)" ></app-watch>
+<app-watch *ngIf="visibility" [obj]="selected" [url]="url" (visiblityEvent)="watchVisibility($event)"></app-watch>

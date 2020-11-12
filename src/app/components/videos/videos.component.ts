@@ -13,31 +13,29 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class VideosComponent implements OnInit {
 
   isLoading: boolean = true;
-  message: Video[] ;
+  message: Video[];
   selected: Video;
   visibility: boolean = false;
   url: SafeResourceUrl;
 
-  constructor(private http: HttpClient,
-    private fetchService: CommonService,
-    private _sanitizer: DomSanitizer) { }
+  constructor(private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.getVideos();
   }
 
-  getVideos(){
+  getVideos(): void {
     this.isLoading = false;
     this.message = VideoList;
   }
 
-  select(obj: Video){
+  select(obj: Video) {
     this.selected = obj;
     this.url = this._sanitizer.bypassSecurityTrustResourceUrl(obj.url);
     this.visibility = true;
   }
 
-  watchVisibility(value: boolean){
+  watchVisibility(value: boolean) {
     this.visibility = value;
   }
 }

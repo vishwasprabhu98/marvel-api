@@ -9,6 +9,10 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { CharacterComponent } from './components/character/character.component';
 import { HomeComponent } from './components/home/home.component';
 import { ComicsComponent } from './components/comics/comics.component';
+import { VideosComponent } from './components/videos/videos.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { SeriesComponent } from './components/series/series.component';
+import { WatchComponent } from './components/watch/watch.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ComicsComponent } from './components/comics/comics.component';
     LoadingComponent,
     CharacterComponent,
     HomeComponent,
-    ComicsComponent
+    ComicsComponent,
+    VideosComponent,
+    MoviesComponent,
+    SeriesComponent,
+    WatchComponent
   ],
   imports: [
     BrowserModule,

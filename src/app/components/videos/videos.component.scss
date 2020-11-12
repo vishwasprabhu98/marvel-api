@@ -1,0 +1,68 @@
+@import 'src/mixins/mixin.scss';
+
+.container {
+  min-height: 70vh;
+
+  @include nav-title-style;
+
+  .row {
+    @include display-center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 40px 0px 10px 0px;
+
+    .video {
+      margin-left: 15px;
+      min-height: 250px;
+      width: 250px;
+      position: relative;
+
+      img {
+        height: 200px;
+        width: inherit;
+        box-shadow: 0px 8px 9px -5px #333232;
+        transition: 0.2s all ease;
+      }
+
+      .name {
+        margin-top: 10px;
+        width: inherit;
+        font-weight: bold;
+        transition: 0.2s all ease;
+      }
+
+      .year {
+        text-transform: uppercase;
+        margin-top: 10px;
+        color: $sub-text;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 150px;
+        right: 10px;
+        @include display-center;
+        height: 40px;
+        width: 40px;
+        background: red;
+        z-index: 333;
+        border-radius: 50%;
+
+        span {
+          color: white;
+        }
+      }
+
+      &:hover {
+
+        .play-button {
+          transform: translateY(-5px);
+        }
+
+        .name {
+          color: red;
+        }
+      }
+    }
+  }
+}
